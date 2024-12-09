@@ -23,6 +23,12 @@ function moveSlide(direction) {
     slides.style.transform = `translateX(${offset}%)`;
 }
 
+function autoSlide() {
+    moveSlide(1); // Move to the next slide automatically
+}
+
+// Set an interval to move the slide every 3 seconds (3000 ms)
+setInterval(autoSlide, 4000);
     </script>
 </head>
 <body>
@@ -64,41 +70,64 @@ function moveSlide(direction) {
         </div>
         <div class="container">
                 <div class="c-main-header">
-                    Hey there, I am Utsab Kafle.
+                    Select a personality to know more!
                 </div>
-
-                <!-- <div class="works">
-                    <img src="photos/teacher.svg" id="c-w-img" alt="">
-                    <img src="photos/businessman.svg" id="c-w-img" alt="">
-                    <img src="photos/student.svg" alt="" id="c-w-img">
-                    <img src="photos/programmer.svg" alt="" id="c-w-img">
-                </div> -->
-
               <div class="ccc">
                 <div class="carousel">
                     <div class="slides">
                         <div class="slide">
-                            <img src="photos/teacher.svg" id="c-w-img" alt="">
-                            <div class="s-i-text">A teacher</div>
+                            <a id="s-link" href="#">
+                            <div class="s-im-holder">
+                                <img src="photos/teacher.svg" id="c-w-img" alt="">
+                            </div>
+                            <div class="s-i-text">Teacher</div>
+                        </a>
                         </div>
                         <div class="slide">
-                            <img src="photos/businessman.svg" id="c-w-img" alt="">
-                            <div class="s-i-text">A founder</div>
+                            <a href="#" id="s-link">
+                            <div class="s-im-holder">
+                                <img src="photos/businessman.svg" id="c-w-img" alt="">
+                            </div>
+                            <div class="s-i-text">Founder</div>
+                            </a>
                         </div>
                         <div class="slide">
-                            <img src="photos/student.svg" alt="" id="c-w-img">
-                            <div class="s-i-text">A student</div>
+                            <a href="#" id="s-link">
+                            <div class="s-im-holder">
+                                <img src="photos/stud.svg" alt="" id="c-w-img">
+                            </div>
+                            <div class="s-i-text">Student</div>
+                            </a>
                         </div>
                         <div class="slide">
-                            <img src="photos/programmer.svg" alt="" id="c-w-img">
-                            <div class="s-i-text">A techie</div>
+                            <a href="#" id="s-link">
+                            <div class="s-im-holder">
+                                <img src="photos/programmer.svg" alt="" id="c-w-img">
+                            </div>
+                            <div class="s-i-text">Techie</div>
+                            </a>
 
                         </div>
                     </div>
-                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <button id="btns" class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button id="btns" class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
                 
+              </div>
+              <div class="works">
+                <div class="c-w-header">Or Check out my things!</div>
+                <div class="w-cont">
+
+                    <div class="w-c-item">
+                        <img id="w-c-img" src="photos/books.svg" alt="">
+                    </div>
+                    <div class="w-c-item">
+                        <img src="photos/guitar.svg" alt="" id="w-c-img">
+                    </div>
+                    <div class="w-c-item">
+                        <img src="photos/earth.svg" alt="" id="w-c-img">
+                    </div>
+                </div>
               </div>
         </div>
     </div>
